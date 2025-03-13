@@ -164,7 +164,25 @@ public class TerrainGenerator {
 			fixture.getFilterData().maskBits = CollisionCategories.CATEGORY_GROUND | CollisionCategories.CATEGORY_CAR;
 			obstacles.add(body);
 		}
+		{
+			BodyDef bodyDef = new BodyDef();
+			bodyDef.type = BodyType.DynamicBody;
 
+			for (int i = 0; i < 40; i++) {
+				CircleShape shape = new CircleShape();
+				shape.setRadius(0.07f);
+
+				Body body = world.createBody(bodyDef);
+				body.setTransform(101, -10, 0);
+				obstacles.add(body);
+
+				Fixture fixture = body.createFixture(shape, 0.1f);
+				fixture.getFilterData().categoryBits = CollisionCategories.CATEGORY_GROUND;
+				fixture.getFilterData().maskBits = CollisionCategories.CATEGORY_GROUND
+						| CollisionCategories.CATEGORY_CAR;
+				shape.dispose();
+			}
+		}
 		for (float x = 10f; x < max; x += random.nextFloat(10)) {
 			BodyDef bodyDef = new BodyDef();
 			bodyDef.type = BodyType.DynamicBody;
@@ -179,7 +197,8 @@ public class TerrainGenerator {
 			fixture.getFilterData().categoryBits = CollisionCategories.CATEGORY_GROUND;
 			fixture.getFilterData().maskBits = CollisionCategories.CATEGORY_GROUND | CollisionCategories.CATEGORY_CAR;
 			obstacles.add(body);
-		}
+			shape.dispose();
+	}
 
 		for (float x = 10f; x < max; x += random.nextFloat(10)) {
 			BodyDef bodyDef = new BodyDef();
@@ -206,6 +225,7 @@ public class TerrainGenerator {
 			fixture.getFilterData().categoryBits = CollisionCategories.CATEGORY_GROUND;
 			fixture.getFilterData().maskBits = CollisionCategories.CATEGORY_GROUND | CollisionCategories.CATEGORY_CAR;
 			obstacles.add(body);
+			shape.dispose();
 		}
 
 		for (float x = 10f; x < max; x += random.nextFloat(30)) {
