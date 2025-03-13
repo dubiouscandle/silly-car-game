@@ -24,7 +24,7 @@ public class WheelScreen implements Screen {
 	Stage stage;
 	Main main;
 
-	TextButton resetButton = new TextButton("reset", Main.skin);
+	TextButton resetButton = new TextButton("clear wheels", Main.skin);
 	TextButton continueButton = new TextButton("spawn it in!", Main.skin);
 	Viewport viewport = new FitViewport(Main.WindowWidth, Main.WindowHeight);
 	WheelPanel wheelPanel = new WheelPanel();

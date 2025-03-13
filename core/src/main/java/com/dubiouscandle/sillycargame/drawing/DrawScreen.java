@@ -20,7 +20,7 @@ public class DrawScreen implements Screen {
 	Viewport viewport = new FitViewport(Main.WindowWidth, Main.WindowHeight);
 
 	TextButton continueButton = new TextButton("continue", Main.skin);
-	TextButton resetButton = new TextButton("reset", Main.skin);
+	TextButton resetButton = new TextButton("clear panel", Main.skin);
 
 	DrawPanel drawPanel = new DrawPanel();
 
