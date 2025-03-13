@@ -11,6 +11,8 @@ import com.dubiouscandle.sillycargame.physics.Wheel;
 import com.dubiouscandle.sillycargame.physics.WheelType;
 
 public class WheelButton extends Actor {	
+	
+	
 	final GlyphLayout layout = new GlyphLayout();
 	final float drawScaleFactor;
 
@@ -21,8 +23,9 @@ public class WheelButton extends Actor {
 
 	public WheelButton(WheelType wheelType, float drawScaleFactor) {
 		this.wheelType = wheelType;
-		this.drawScaleFactor = drawScaleFactor;
-	}
+		this.drawScaleFactor = drawScaleFactor;		
+
+	}	
 
 	@Override
 	public void draw(Batch batch, float parentAlpha) {

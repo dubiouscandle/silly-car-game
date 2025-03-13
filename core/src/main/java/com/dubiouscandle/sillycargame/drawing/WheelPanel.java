@@ -91,7 +91,7 @@ public class WheelPanel extends Canvas {
 		
 		Main.font.setColor(0, 0, 0, 1);
 		Main.font.getData().setScale(1);
-		Main.font.draw(batch, "drag to add wheels. scroll on the wheel drag button thingys to change its size before you place it", 0,
+		Main.font.draw(batch, "scroll on the drag sources to change the wheel size before you place it", 0,
 				Main.WindowHeight * 0.95f, Main.WindowWidth, Align.center, true);
 	}
 
