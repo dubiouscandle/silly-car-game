@@ -95,7 +95,7 @@ public class TerrainGenerator {
 			Body body = world.createBody(bodyDef);
 			obstacles.add(body);
 
-			body.setTransform(101, -9, 0);
+			body.setTransform(101, -19.5f, 0);
 
 			PolygonShape shape = new PolygonShape();
 			shape.setAsBox(1.5f, 0.1f);
