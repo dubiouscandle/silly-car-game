@@ -36,10 +36,7 @@ public class WheelScreen implements Screen {
 	boolean dragging = false;
 	Vector2 draggingPos = new Vector2();
 
-	WheelButton[] wheelButtons = new WheelButton[] { new WheelButton(WheelType.WHEELY, wheelPanelSize),
-			new WheelButton(WheelType.FLOWER, wheelPanelSize), new WheelButton(WheelType.RECURSIVE, wheelPanelSize),
-			new WheelButton(WheelType.DOUBLE, wheelPanelSize), new WheelButton(WheelType.DUBIOUS, wheelPanelSize),
-			new WheelButton(WheelType.EGGY, wheelPanelSize), };
+	WheelButton[] wheelButtons;
 
 	public WheelScreen(Main main) {
 		resetButton.addListener(new InputListener() {
@@ -53,11 +50,11 @@ public class WheelScreen implements Screen {
 			@Override
 			public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
 				Car car = new Car(wheelPanel.shape);
-				
-				for(WheelPlacement placement : wheelPanel.placements) {
+
+				for (WheelPlacement placement : wheelPanel.placements) {
 					car.addWheel(placement);
 				}
-				
+
 				main.worldScreen.prep(car);
 				main.setScreen(main.worldScreen);
 				return true;
@@ -72,8 +69,16 @@ public class WheelScreen implements Screen {
 		float marginY = 0.5f * (Main.WindowHeight - size);
 		wheelPanel.setBounds(marginX, marginY, size);
 
-		positionButtons();
 
+		wheelButtons = new WheelButton[] { new WheelButton(stage, WheelType.WHEELY, wheelPanelSize),
+				new WheelButton(stage, WheelType.FLOWER, wheelPanelSize),
+				new WheelButton(stage, WheelType.RECURSIVE, wheelPanelSize),
+				new WheelButton(stage, WheelType.DOUBLE, wheelPanelSize),
+				new WheelButton(stage, WheelType.DUBIOUS, wheelPanelSize),
+				new WheelButton(stage, WheelType.EGGY, wheelPanelSize), };
+		
+		positionButtons();
+		
 		for (WheelButton wheelButton : wheelButtons) {
 			wheelButton.setTouchable(Touchable.enabled);
 			wheelButton.addListener(new InputListener() {
@@ -115,7 +120,7 @@ public class WheelScreen implements Screen {
 				}
 			});
 		}
-		
+
 	}
 
 	private void positionButtons() {
@@ -145,17 +150,18 @@ public class WheelScreen implements Screen {
 	public void show() {
 		wheelPanel.reset();
 		dragging = false;
-		
+
 		stage.setViewport(viewport);
 
 		for (WheelButton wheelButton : wheelButtons) {
 			stage.addActor(wheelButton);
+			stage.addActor(wheelButton.plus);
+			stage.addActor(wheelButton.minus);
 		}
 
 		stage.addActor(continueButton);
 		stage.addActor(resetButton);
 		stage.addActor(wheelPanel);
-
 	}
 
 	public void prep(FloatArray shape) {
