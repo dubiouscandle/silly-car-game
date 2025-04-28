@@ -1,36 +1,10 @@
 # silly car game
 
-A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
+Draw a silly car and watch it go super far! (or not).
 
-This project was generated with a template including simple application launchers and a main class extending `Game` that sets the first screen.
 
-## Platforms
-
-- `core`: Main module with the application logic shared by all platforms.
-- `lwjgl3`: Primary desktop platform using LWJGL3; was called 'desktop' in older docs.
-- `html`: Web platform using GWT and WebGL. Supports only Java projects.
-
-## Gradle
-
-This project uses [Gradle](https://gradle.org/) to manage dependencies.
-The Gradle wrapper was included, so you can run Gradle tasks using `gradlew.bat` or `./gradlew` commands.
-Useful Gradle tasks and flags:
-
-- `--continue`: when using this flag, errors will not stop the tasks from running.
-- `--daemon`: thanks to this flag, Gradle daemon will be used to run chosen tasks.
-- `--offline`: when using this flag, cached dependency archives will be used.
-- `--refresh-dependencies`: this flag forces validation of all dependencies. Useful for snapshot versions.
-- `build`: builds sources and archives of every project.
-- `cleanEclipse`: removes Eclipse project data.
-- `cleanIdea`: removes IntelliJ project data.
-- `clean`: removes `build` folders, which store compiled classes and built archives.
-- `eclipse`: generates Eclipse project data.
-- `html:dist`: compiles GWT sources. The compiled application can be found at `html/build/dist`: you can use any HTTP server to deploy it.
-- `html:superDev`: compiles GWT sources and runs the application in SuperDev mode. It will be available at [localhost:8080/html](http://localhost:8080/html). Use only during development.
-- `idea`: generates IntelliJ project data.
-- `lwjgl3:jar`: builds application's runnable jar, which can be found at `lwjgl3/build/libs`.
-- `lwjgl3:run`: starts the application.
-- `test`: runs unit tests (if any).
-
-Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should be replaced with the ID of a specific project.
-For example, `core:clean` removes `build` folder only from the `core` project.
+<img width="1440" alt="Screenshot 2025-04-27 at 9 21 19 PM" src="https://github.com/user-attachments/assets/da8ae237-3bb9-4af7-82aa-998744d3ad9d" />
+<img width="1440" alt="Screenshot 2025-04-27 at 9 20 22 PM" src="https://github.com/user-attachments/assets/85a834e3-fb09-43dd-a2ef-93aaf212c31c" />
+<img width="1440" alt="Screenshot 2025-04-27 at 9 20 28 PM" src="https://github.com/user-attachments/assets/34cfda80-2b09-4e9f-ab8d-59b346ae970a" />
+<img width="1440" alt="Screenshot 2025-04-27 at 9 20 55 PM" src="https://github.com/user-attachments/assets/f4ce23ba-2140-4480-ad70-f119f0e42adc" />
+<img width="1440" alt="Screenshot 2025-04-27 at 9 21 08 PM" src="https://github.com/user-attachments/assets/6c9ee652-7085-4c8a-9c82-59404cf32c28" />
